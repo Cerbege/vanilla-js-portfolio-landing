@@ -1,0 +1,129 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --card-bg: #f4f4f6;
+    --accent-color: #2563eb;
+    --btn-text: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f0f11;
+    --text-color: #f3f4f6;
+    --card-bg: #1c1c1f;
+    --accent-color: #60a5fa;
+    --btn-text: #0f0f11;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 0 24px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+    color: var(--accent-color);
+}
+
+.btn-toggle {
+    background: var(--card-bg);
+    border: 1px solid transparent;
+    color: var(--text-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.btn-toggle:hover {
+    border-color: var(--accent-color);
+}
+
+/* Main Content Container (Centers content vertically) */
+.hero-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    max-width: 700px;
+}
+
+.badge {
+    background: var(--card-bg);
+    color: var(--accent-color);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+    line-height: 1.15;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    opacity: 0.75;
+    line-height: 1.6;
+    margin-bottom: 36px;
+}
+
+/* Button */
+.btn-primary {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--btn-text);
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+}
